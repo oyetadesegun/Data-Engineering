@@ -1,0 +1,8 @@
+cd airflow
+source py_env/bin/activate
+export AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////home/codespace/airflow/airflow.db
+airflow webserver -p 8080
+
+------------------
+python -m venv py_env
+airflow db init
