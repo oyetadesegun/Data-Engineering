@@ -1,0 +1,17 @@
+[2024-11-06T15:14:31.428+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-06T15:14:31.559+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_dag_with_python_operator_V3.get_name scheduled__2024-11-04T00:00:00+00:00 [queued]>
+[2024-11-06T15:14:31.709+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_dag_with_python_operator_V3.get_name scheduled__2024-11-04T00:00:00+00:00 [queued]>
+[2024-11-06T15:14:31.720+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-11-06T15:14:32.104+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): get_name> on 2024-11-04 00:00:00+00:00
+[2024-11-06T15:14:32.564+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'our_dag_with_python_operator_V3', 'get_name', 'scheduled__2024-11-04T00:00:00+00:00', '--job-id', '182', '--raw', '--subdir', 'DAGS_FOLDER/create_dag_with_python.py', '--cfg-path', '/tmp/tmpv5_bw3vz']
+[2024-11-06T15:14:32.588+0000] {standard_task_runner.py:105} INFO - Job 182: Subtask get_name
+[2024-11-06T15:14:32.710+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=212) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-11-06T15:14:32.802+0000] {standard_task_runner.py:72} INFO - Started process 233 to run task
+[2024-11-06T15:14:33.151+0000] {task_command.py:467} INFO - Running <TaskInstance: our_dag_with_python_operator_V3.get_name scheduled__2024-11-04T00:00:00+00:00 [running]> on host b0b6b56c3157
+[2024-11-06T15:14:35.129+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='johnwell' AIRFLOW_CTX_DAG_ID='our_dag_with_python_operator_V3' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2024-11-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-04T00:00:00+00:00'
+[2024-11-06T15:14:35.130+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-06T15:14:35.798+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-06T15:14:35.986+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-06T15:14:35.987+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=our_dag_with_python_operator_V3, task_id=get_name, run_id=scheduled__2024-11-04T00:00:00+00:00, execution_date=20241104T000000, start_date=20241106T151431, end_date=20241106T151435
+[2024-11-06T15:14:36.841+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-06T15:14:36.874+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

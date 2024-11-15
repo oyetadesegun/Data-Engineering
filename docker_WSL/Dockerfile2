@@ -1,0 +1,11 @@
+# Use a base Python image
+FROM python:3.9
+
+# Install pandas
+RUN pip install pandas
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Default command
+ENTRYPOINT ["bash"]
